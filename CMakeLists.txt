@@ -12,6 +12,10 @@ if( USE_VTK )
   include(${VTK_USE_FILE})
 endif()
 
+set( CPACK_PACKAGE_VERSION_MAJOR       2 )
+set( CPACK_PACKAGE_VERSION_MINOR       1 )
+set( CPACK_PACKAGE_VERSION_PATCH       0 )
+
 include(CTest)
 include(CPack)
 
