@@ -103,7 +103,7 @@ size) by taking advantage of the streaming capabilities of the Insight Toolkit
 ITK v4.  Here we illustrate two scenarios: (a) the case when the image itself is
 larger than the computer's RAM, (b) the case when the image is large but still
 can fit in the computer's RAM. This report is intended to serve as a tutorial
-on how to take advantage of this memory management capabilities of ITK.
+on how to take advantage of this memory management capabilities of ITK version 4.
 
 This paper is accompanied with the source code, input data, parameters and
 output data that we used for validating the algorithm described in this paper.
@@ -301,13 +301,8 @@ filter, it can perform hole filling or noise removal from the background (see
 Figure \ref{fig:ImageTwo}).  We have used it here for both purposes.
 
 We recall again in the fact that there is only a single code line that
-need to be included to activate the streaming:
-
-\begin{center}
-\lstinputlisting[linerange={74-74}]{../../src/VotingBinaryHoleFillingImageFilter.cxx}
-\end{center}
-
-On the other hand, nothing needs to be added in order to activate the multi-threading.
+need to be included to activate the streaming. On the other hand, nothing needs
+to be added in order to activate the multi-threading.
 If the filter allows the use of multiple cores, it will make use of them.
 
 \subsection{Subtraction}
@@ -343,7 +338,7 @@ stages of the pipeline.
 
 \itkcaption[Pipeline execution on image 1]{Pipeline execution on image 1. First row left, Original image; center,
 Binarized image shows trabecular bone in white. Right. Image after noise removal. Second row. Left. Hole-filling after one
-iteration. Center. Hole-filling after three iterations. Right. Subtracted image.}
+iteration. Center. Hole-filling after three iterations. Right. Subtracted image. Only a subregion of the image is shown.}
 \label{fig:ImageOne}
 \end{figure}
 
